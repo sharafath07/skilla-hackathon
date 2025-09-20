@@ -1,14 +1,14 @@
 {
   "name": "frontend",
-  "homepage": "https://sharafath07.github.io/skilla-hackathon/",
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "homepage": "https://sharafath07.github.io/skilla-hackathon/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
     "gh-pages": "^6.3.0",
+    "gh-pages-clean": "^6.1.1",
     "vite": "^7.1.6"
   }
 }
